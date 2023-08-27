@@ -1,0 +1,89 @@
+{
+  /**
+   * VSCode Workspace Settings
+   *
+   * NOTE [Default Values]: Many settings in this file have default values. This is to override
+   * any user settings that may conflict with the default values, since workspace settings take
+   * precedence. Some values are empty objects or empty arrays, which is also done for this reason.
+   *
+   * NOTE [Language Specific Settings]: With regards to language specific user settings, these will
+   * override any non-language specific workspace settings. This file does not handle overriding
+   * language specific user settings with their default values. All settings in this file must
+   * adhere to all languages used in this project. Therefore, ensure that language specific user
+   * settings are not overriding any of these non-language specific workspace settings.
+   */
+
+  /**
+   * File Structure Settings
+   */
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+
+  /**
+   * Formatter Settings
+   * Can use `Shift + Alt/Option + F` to format a file
+   */
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  "files.autoSave": "onFocusChange", // Value must not be "afterDelay" for "editor.formatOnSave" to work
+
+  /**
+   * Linter Settings
+   */
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.markdownlint": true
+  },
+
+  /**
+   * Prettier Extension Settings (Markdown, YAML, and JSON Formatter)
+   * Formatting options are within ".prettierrc.json" file
+   * Formatting options can be found at: https://prettier.io/docs/en/options.html
+   */
+  "prettier.enable": true,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.configPath": ".prettierrc.json",
+  "prettier.documentSelectors": ["**/*"],
+  "prettier.ignorePath": ".prettierignore",
+
+  /**
+   * markdownlint Extension Settings (Markdown Linter)
+   * Linting rules are within ".markdownlint.json" file
+   * Linting rules can be found at: https://github.com/DavidAnson/markdownlint#rules--aliases
+   */
+  "markdownlint.config": {},
+  "markdownlint.customRules": [],
+  "markdownlint.ignore": [],
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+    "!**/.git"
+  ],
+  "markdownlint.run": "onType",
+  // Markdown Built-In Settings: No overrides needed
+
+  /**
+   * YAML Extension Settings (YAML Linter and Schema Validator)
+   * Linting rules and schemas are within this file
+   */
+  "yaml.customTags": [],
+  "yaml.disableAdditionalProperties": false,
+  "yaml.keyOrdering": false,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
+  },
+  "yaml.style.flowMapping": "allow",
+  "yaml.style.flowSequence": "allow",
+  "yaml.validate": true,
+  "yaml.yamlVersion": "1.2",
+
+  /**
+   * JSON Built-In Settings (JSON Schema Validator)
+   * Schemas are within this file
+   */
+  "json.schemaDownload.enable": true,
+  "json.schemas": [],
+  "json.validate.enable": true
+}
