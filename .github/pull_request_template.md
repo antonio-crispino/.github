@@ -1,10 +1,4 @@
----
-name: General Pull Request (PR) Template
-about: This is a general pull request template that should be applicable to any type of pull request made on software development projects.
-title: "[PULL REQUEST] Pull Request Brief Description"
-labels: ""
-assignees: ""
----
+<!-- title: [PULL REQUEST] Pull Request Brief Description -->
 
 # Pull Request <span id="pr-pull-request">
 
