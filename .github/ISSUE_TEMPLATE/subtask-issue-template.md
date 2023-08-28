@@ -1,6 +1,6 @@
 ---
 name: Subtask Issue Template
-about: A Subtask is a child work item that is part of a larger Story, Task, or Bug. Subtasks are used to break down the work into smaller, more manageable parts, each of which can be worked on independently. They cannot be further broken down into child Subtasks.
+about: A Subtask is a smaller component of a larger Story, Task, or Bug, designed to make work more manageable and allow for independent progress. Subtasks cannot be further divided.
 title: "[SUBTASK: E###-[S/T]###-ST### or [S/T/B]###-ST###] Subtask Brief Description"
 labels: subtask
 assignees: ""
@@ -38,7 +38,7 @@ A brief summary of the Subtask.
 > 8. :wastebasket: `revert` (revert): Changes that revert a previous commit.
 > 9. :gem: `style` (style): Changes to code that do not affect its meaning (formatting, etc.).
 > 10. :rotating_light: `test` (test): Changes to existing tests or adding missing tests.
-> 11. _:recycle: `chore` (chore): Changes, additions, configurations, routines, or maintenance tasks that don't fit into any other category. Changes do not modify src or test files._
+> 11. _:recycle: `chore` (chore): Changes, additions, configurations, routines, or maintenance tasks that does not fit into any other category. Changes do not modify src or test files._
 
 [`type`]
 

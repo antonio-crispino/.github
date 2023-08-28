@@ -1,6 +1,6 @@
 ---
 name: Bug Issue Template
-about: A Bug is a work item that represents a problem, error, flaw, or fault in the software that needs to be fixed. Bugs can be discovered during testing or reported by users once the software is in use. Bugs are stand-alone. They can be further broken down into child Subtasks.
+about: A Bug is a work item that represents a problem, error, flaw, or fault in the software that needs to be fixed. Bugs are stand-alone and can be further broken down into child Subtasks.
 title: "[BUG: B###] Bug Brief Description"
 labels: bug, fix
 assignees: ""

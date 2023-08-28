@@ -1,6 +1,6 @@
 ---
 name: Story Issue Template
-about: A Story (also known as user story) is a work item that represents a requirement or request from the user's perspective, often written from the viewpoint of the end-user. It describes a specific piece of work that needs to be done, usually able to be completed within a single sprint. It is a small, independent piece of work and provides value to the user. Stories are usually part of an Epic to make the work manageable and trackable, but they can be stand-alone. They can be further broken down into child Subtasks.
+about: A Story (also known as user story) is a work item that adds value to the user. Stories can be part of a larger Epic and can be divided into Subtasks for easier management and tracking.
 title: "[STORY: E###-S### or S###] Story Brief Description"
 labels: story, feature
 assignees: ""

@@ -1,6 +1,6 @@
 ---
 name: Task Issue Template
-about: A Task is a work item that needs to be completed but doesn't fit the narrative style of a Story (user story). It could be any kind of work such as a technical piece of work, conducting a meeting, performing some research, or doing other activities that don't deliver a user-facing feature or fix, but are necessary for the project. Tasks are usually part of an Epic to make the work manageable and trackable, but they can be stand-alone. They can be further broken down into child Subtasks.
+about: A Task is a work item that does not fit the narrative style of a Story (user story). Tasks can be part of a larger Epic and can be divided into Subtasks for easier management and tracking.
 title: "[TASK: E###-T### or T###] Task Brief Description"
 labels: task
 assignees: ""
@@ -35,7 +35,7 @@ A brief summary of the Task.
 > 6. :wastebasket: `revert` (revert): Changes that revert a previous commit.
 > 7. :gem: `style` (style): Changes to code that do not affect its meaning (formatting, etc.).
 > 8. :rotating_light: `test` (test): Changes to existing tests or adding missing tests.
-> 9. _:recycle: `chore` (chore): Changes, additions, configurations, routines, or maintenance tasks that don't fit into any other category. Changes do not modify src or test files._
+> 9. _:recycle: `chore` (chore): Changes, additions, configurations, routines, or maintenance tasks that does not fit into any other category. Changes do not modify src or test files._
 
 [`type`]
 

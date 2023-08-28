@@ -1,6 +1,6 @@
 ---
 name: Epic Issue Template
-about: An Epic is a large body of work that is broken down into a number of smaller parts (Stories and Tasks). It is a high-level parent work item that typically involves considerable work to complete. An Epic might encapsulate a new feature, a large enhancement, or any other significant piece of work that is expected to take a long time to complete.
+about: An Epic is a large body of work that is broken down into a number of smaller parts (Stories and Tasks).
 title: "[EPIC: E###] Epic Brief Description"
 labels: epic
 assignees: ""
