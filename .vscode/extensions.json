@@ -1,7 +1,7 @@
 {
   "recommendations": [
     /**
-     * Extensions for formatting, linting, and schema validation
+     * REQUIRED: Extensions for formatting, linting, and schema validation
      */
     "esbenp.prettier-vscode", // Markdown, YAML, and JSON Formatter
     "davidanson.vscode-markdownlint", // Markdown Linter
@@ -9,7 +9,7 @@
     // VSCode has built-in JSON Schema Validator
 
     /**
-     * Extensions for previewing GitHub's Markdown rendering
+     * REQUIRED: Extensions for previewing GitHub's Markdown rendering
      */
     "bierner.github-markdown-preview", // The following extensions are all part of this extension pack
     "bierner.markdown-preview-github-styles",
@@ -17,6 +17,12 @@
     "bierner.markdown-checkbox",
     "bierner.markdown-yaml-preamble",
     "bierner.markdown-footnotes",
-    "bierner.markdown-mermaid"
+    "bierner.markdown-mermaid",
+
+    /**
+     * OPTIONAL: Extensions for Enhancing Git and GitHub Workflow
+     */
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens"
   ]
 }
