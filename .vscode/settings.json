@@ -6,18 +6,33 @@
    * any user settings that may conflict with the default values, since workspace settings take
    * precedence. Some values are empty objects or empty arrays, which is also done for this reason.
    *
-   * NOTE [Language Specific Settings]: With regards to language specific user settings, these will
-   * override any non-language specific workspace settings. This file does not handle overriding
-   * language specific user settings with their default values. All settings in this file must
-   * adhere to all languages used in this project. Therefore, ensure that language specific user
-   * settings are not overriding any of these non-language specific workspace settings.
+   * NOTE [language-specific Settings]: With regards to language-specific user settings, these will
+   * override any non-language-specific workspace settings. Although this file has some language
+   * specific settings, the file does not handle overriding language-specific user settings (as was
+   * done for non-language-specific workspace settings). All non-language-specific settings in this
+   * file must adhere to all languages used in this project (except if any of those settings are
+   * overridden by language-specific workspace settings). Therefore, ensure that language-specific
+   * user settings are not overriding any of these non-language-specific workspace settings.
    */
 
   /**
    * File Structure Settings
+   * Prettier does not format all file types, so some settings will handle those unsupported files
    */
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.autoGuessEncoding": false,
   "files.encoding": "utf8",
   "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  "[markdown]": {
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on" // To avoid manual line breaks
+  },
 
   /**
    * Formatter Settings
