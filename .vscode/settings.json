@@ -98,7 +98,8 @@
       ".github/ISSUE_TEMPLATE/epic.yml",
       ".github/ISSUE_TEMPLATE/story.yml",
       ".github/ISSUE_TEMPLATE/task.yml",
-      ".github/ISSUE_TEMPLATE/bug.yml"
+      ".github/ISSUE_TEMPLATE/bug.yml",
+      ".github/ISSUE_TEMPLATE/subtask.yml"
     ]
   },
   "yaml.style.flowMapping": "allow",
