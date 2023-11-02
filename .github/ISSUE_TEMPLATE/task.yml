@@ -1,0 +1,225 @@
+name: "Task"
+description: "A Task is a work item that does not fit the narrative style of a Story (user story). Tasks can be part of a larger Epic and can be divided into Subtasks for easier management and tracking."
+title: "[TASK: E###-T### or T###] Task Brief Description"
+labels:
+  - "task"
+
+body:
+  ### LABELS ###
+
+  - type: "markdown"
+    attributes:
+      # For this section, HTML elements are used instead of Markdown. This is because the "details" HTML element, which provides a collapsible feature, doesn't support Markdown properly within it. Additionally, there is no equivalent feature to this "details" element in GitHub Flavored Markdown. To ensure consistency and convenience, the entire section is written in HTML. This approach avoids mixing a small amount of Markdown with a predominantly HTML structure, which is mainly within the "details" elements. Since CSS cannot be used here, some GitHub styled HTML elements were used for styling purposes alone. The HTML was written and tested within HTML and Markdown files, then pasted here.
+      value: |
+        <p><strong>Labels 🏷️</strong></p>
+        <blockquote>
+          <p>In addition to the <code>task</code> label, apply a label to this issue for each of the following properties:</p>
+
+          <details>
+            <summary><strong>Type</strong></summary>
+            <br />
+            <p>The type of the Task.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Option</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr title="type: build">
+                  <th scope="row">🛠️</th>
+                  <td><code>build</code></td>
+                  <td>Changes that affect the build system or external dependencies.</td>
+                </tr>
+                <tr title="type: ci">
+                  <th scope="row">⚙️</th>
+                  <td><code>ci</code></td>
+                  <td>Changes to CI configuration files and scripts.</td>
+                </tr>
+                <tr title="type: documentation">
+                  <th scope="row">📚</th>
+                  <td><code>documentation</code></td>
+                  <td>Changes to documentation.</td>
+                </tr>
+                <tr title="type: performance">
+                  <th scope="row">🚀</th>
+                  <td><code>performance</code></td>
+                  <td>Changes to code that improves performance.</td>
+                </tr>
+                <tr title="type: refactor">
+                  <th scope="row">📦</th>
+                  <td><code>refactor</code></td>
+                  <td>Changes to code that neither fixes a bug nor adds a feature.</td>
+                </tr>
+                <tr title="type: revert">
+                  <th scope="row">🗑️</th>
+                  <td><code>revert</code></td>
+                  <td>Changes that revert a previous commit.</td>
+                </tr>
+                <tr title="type: style">
+                  <th scope="row">💎</th>
+                  <td><code>style</code></td>
+                  <td>Changes to code that do not affect its meaning (formatting, etc.).</td>
+                </tr>
+                <tr title="type: test">
+                  <th scope="row">🚨</th>
+                  <td><code>test</code></td>
+                  <td>Changes to existing tests or adding missing tests.</td>
+                </tr>
+                <tr title="type: chore">
+                  <th scope="row">♻️</th>
+                  <td><code>chore</code></td>
+                  <td>Changes, additions, configurations, routines, or maintenance tasks that does not fit into any other category. Changes do not modify src or test files.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>The format for the Type label is <code>type: option</code>, where "option" is one of the possible options above. Hover over a row to see its label.</p>
+          </details>
+
+          <details>
+            <summary><strong>Priority</strong></summary>
+            <br />
+            <p>The priority of the Task (MoSCoW method).</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col" width="115">Option</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr title="priority: must-have">
+                  <th scope="row">☀️</th>
+                  <td><code>must-have</code></td>
+                  <td>Essential and critical for success; non-negotiable.</td>
+                </tr>
+                <tr title="priority: should-have">
+                  <th scope="row">🔶</th>
+                  <td><code>should-have</code></td>
+                  <td>Important but not vital; can be delayed.</td>
+                </tr>
+                <tr title="priority: could-have">
+                  <th scope="row">🔷</th>
+                  <td><code>could-have</code></td>
+                  <td>Desirable but optional; included if resources allow.</td>
+                </tr>
+                <tr title="priority: won't-have">
+                  <th scope="row">⛔</th>
+                  <td><code>won't-have</code></td>
+                  <td>Lowest priority; not necessary now, may be reconsidered later.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>The format for the Priority label is <code>priority: option</code>, where "option" is one of the possible options above. Hover over a row to see its label.</p>
+          </details>
+
+          <details>
+            <summary><strong>Points</strong></summary>
+            <br />
+            <p>The estimated effort required to complete the Task. This is estimated using task points (TP), which are based on and equivalent to user story points (USP). The number of task points allocated is an option selected from the following Fibonacci-like sequence:</p>
+            <p>
+              <code title="points: 1">1</code>, <code title="points: 2">2</code>,
+              <code title="points: 3">3</code>, <code title="points: 5">5</code>,
+              <code title="points: 8">8</code>, <code title="points: 13">13</code>,
+              <code title="points: 20">20</code>, <code title="points: 40">40</code>,
+              <code title="points: 100">100</code>
+            </p>
+            <p>The format for the Points label is <code>points: option</code>, where "option" is one of the possible options above. Hover over an option to see its label.</p>
+          </details>
+
+        </blockquote>
+        <br />
+
+  ### DESCRIPTION ###
+
+  - type: "textarea"
+    id: "task-description"
+    attributes:
+      label: "Description 📝"
+      description: "A detailed description of the Task. This includes any relevant context, requirements, and constraints."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### DEPENDENCIES ###
+
+  - type: "textarea"
+    id: "task-dependencies"
+    attributes:
+      label: "Dependencies ⛓️"
+      description: "A list of dependencies required for the completion of the Task. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. This Task cannot start until [#issue_number] has [finished/started].
+        2. This Task cannot finish until [#issue_number] has [finished/started].
+        3. Dependency 3
+        &#13;
+        In addition to these dependencies between issues, there may also be other types of dependencies
+        to consider, such as external, resource-related, and business-related dependencies.</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### ACCEPTANCE CRITERIA ###
+
+  - type: "textarea"
+    id: "task-acceptance-criteria"
+    attributes:
+      label: "Acceptance Criteria ✔️"
+      description: "A list of conditions that must be met for the Task to be considered complete."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. Acceptance criteria 1
+        2. Acceptance criteria 2
+        3. Acceptance criteria 3</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### SUBTASKS ###
+
+  - type: "textarea"
+    id: "task-subtasks"
+    attributes:
+      label: "Subtasks 📋"
+      description: "A list of subtasks required to complete the Task. These do not need to have their own Subtask issues, but they could. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        - [ ] 1. Subtask 1
+        - [ ] 2. Subtask 2
+        - [ ] 3. #issue_number</pre>
+          </details>
+        </blockquote>
