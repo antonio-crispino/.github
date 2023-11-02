@@ -34,6 +34,10 @@
     "editor.wordWrap": "on" // To avoid manual line breaks
   },
 
+  "[yaml]": {
+    "editor.wordWrap": "on" // For better readability
+  },
+
   /**
    * Formatter Settings
    * Can use `Shift + Alt/Option + F` to format a file
@@ -87,7 +91,12 @@
   "yaml.disableAdditionalProperties": false,
   "yaml.keyOrdering": false,
   "yaml.schemas": {
-    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
+    "https://json.schemastore.org/github-issue-config.json": [
+      ".github/ISSUE_TEMPLATE/config.yml"
+    ],
+    "https://json.schemastore.org/github-issue-forms.json": [
+      ".github/ISSUE_TEMPLATE/epic.yml"
+    ]
   },
   "yaml.style.flowMapping": "allow",
   "yaml.style.flowSequence": "allow",

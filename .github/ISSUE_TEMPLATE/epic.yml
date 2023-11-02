@@ -1,0 +1,266 @@
+name: "Epic"
+description: "An Epic is a large body of work that is broken down into a number of smaller parts (Stories and Tasks)."
+title: "[EPIC: E###] Epic Brief Description"
+labels:
+  - "epic"
+
+body:
+  ### LABELS ###
+
+  - type: "markdown"
+    attributes:
+      # For this section, HTML elements are used instead of Markdown. This is because the "details" HTML element, which provides a collapsible feature, doesn't support Markdown properly within it. Additionally, there is no equivalent feature to this "details" element in GitHub Flavored Markdown. To ensure consistency and convenience, the entire section is written in HTML. This approach avoids mixing a small amount of Markdown with a predominantly HTML structure, which is mainly within the "details" elements. Since CSS cannot be used here, some GitHub styled HTML elements were used for styling purposes alone. The HTML was written and tested within HTML and Markdown files, then pasted here.
+      value: |
+        <p><strong>Labels 🏷️</strong></p>
+        <blockquote>
+          <p>In addition to the <code>epic</code> label, apply a label to this issue for the following property:</p>
+
+          <details>
+            <summary><strong>Priority</strong></summary>
+            <br />
+            <p>The priority of the Epic (MoSCoW method).</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col" width="115">Option</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr title="priority: must-have">
+                  <th scope="row">☀️</th>
+                  <td><code>must-have</code></td>
+                  <td>Essential and critical for success; non-negotiable.</td>
+                </tr>
+                <tr title="priority: should-have">
+                  <th scope="row">🔶</th>
+                  <td><code>should-have</code></td>
+                  <td>Important but not vital; can be delayed.</td>
+                </tr>
+                <tr title="priority: could-have">
+                  <th scope="row">🔷</th>
+                  <td><code>could-have</code></td>
+                  <td>Desirable but optional; included if resources allow.</td>
+                </tr>
+                <tr title="priority: won't-have">
+                  <th scope="row">⛔</th>
+                  <td><code>won't-have</code></td>
+                  <td>Lowest priority; not necessary now, may be reconsidered later.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>The format for the Priority label is <code>priority: option</code>, where "option" is one of the possible options above. Hover over a row to see its label.</p>
+          </details>
+
+        </blockquote>
+        <br />
+
+  ### DESCRIPTION ###
+  - type: "textarea"
+    id: "epic-description"
+    attributes:
+      label: "Description 📝"
+      description: "A detailed description of the Epic. This includes the business need, the goals, and any relevant stakeholders."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### REQUIREMENTS ###
+
+  - type: "textarea"
+    id: "epic-requirements"
+    attributes:
+      label: "Requirements 📋"
+      description: "A list of the high-level requirements (functional and non-functional) that must be met for the Epic to be considered complete. These will translate to Stories and Tasks."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        **Functional**
+        &#13;
+        1. Functional Requirement 1
+        2. Functional Requirement 2
+        3. Functional Requirement 3
+        &#13;
+        **Non-Functional**
+        &#13;
+        1. Non-Functional Requirement 1
+        2. Non-Functional Requirement 2
+        3. Non-Functional Requirement 3</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### CONSTRAINTS ###
+
+  - type: "textarea"
+    id: "epic-constraints"
+    attributes:
+      label: "Constraints 🔒"
+      description: |
+        A list of constraints of the Epic. This includes the triple constraint (scope, timeline, budget) along with any other constraints of the Epic. The constraints commonly associated with software development projects are implied. If any other constraints beyond what's ordinarily expected are identified, they should be stated here.
+          - Scope: This defines what is and is not included in the Epic, encompassing any related initiatives, projects, or Epics.
+          - Timeline: The estimated start and end dates (duration) of the Epic. This is based on the planned sprints (milestones) for the child issues (Stories and Tasks) linked to this Epic. The start date is the start date of the child issue with the earliest sprint, while the end date is the end date of the child issue with the latest sprint.
+          - Budget: The estimated budget for the Epic.
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. Scope: ...
+        2. Timeline: ...
+        3. Budget: ...
+        4. Constraint 4</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### ASSUMPTIONS ###
+
+  - type: "textarea"
+    id: "epic-assumptions"
+    attributes:
+      label: "Assumptions ❓"
+      description: "A list of things that are assumed to be true in the planning and execution of the Epic. The assumptions commonly associated with software development projects are implied. If any other assumptions beyond what's ordinarily expected are identified, they should be stated here."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. Assumption 1
+        2. Assumption 2
+        3. Assumption 3</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### RISKS ###
+
+  - type: "textarea"
+    id: "epic-risks"
+    attributes:
+      label: "Risks ⚠️"
+      description: 'A list of potential risks that may impact the completion of the Epic. The risks commonly associated with software development projects are implied. If any other risks beyond what''s ordinarily expected are identified, they should be stated here. Risk probability and risk impact range from 1 to 5, where 1 is "Very Low" and 5 is "Very High". Therefore, risk score (risk probability x risk impact) ranges from 1 to 25.'
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. If [Cause], then [Event] may occur, which will lead to [Impact].
+           The risk probability is [1-5] and the risk impact would be [1-5].
+           Therefore, the risk score is [Risk Probability x Risk Impact].
+        2. If [Cause], then [Event] may occur, which will lead to [Impact].
+           The risk probability is [1-5] and the risk impact would be [1-5].
+           Therefore, the risk score is [Risk Probability x Risk Impact].
+        3. If [Cause], then [Event] may occur, which will lead to [Impact].
+           The risk probability is [1-5] and the risk impact would be [1-5].
+           Therefore, the risk score is [Risk Probability x Risk Impact].</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### DEPENDENCIES ###
+
+  - type: "textarea"
+    id: "epic-dependencies"
+    attributes:
+      label: "Dependencies ⛓️"
+      description: "A list of dependencies required for the completion of the Epic. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. This Epic cannot start until [#issue_number] has [finished/started].
+        2. This Epic cannot finish until [#issue_number] has [finished/started].
+        3. Dependency 3
+        &#13;
+        In addition to these dependencies between issues, there may also be other types of dependencies
+        to consider, such as external, resource-related, and business-related dependencies.</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### ACCEPTANCE CRITERIA ###
+
+  - type: "textarea"
+    id: "epic-acceptance-criteria"
+    attributes:
+      label: "Acceptance Criteria ✔️"
+      description: "A list of conditions that must be met for the Epic to be considered complete. This can use the Given-When-Then (GWT) format and/or other statement formats if appropriate."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. Given [Context], when [Action], then [Expected Result].
+        2. Given [Context], when [Action], then [Expected Result].
+        3. Acceptance criteria 3</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### CHILD ISSUES ###
+
+  - type: "textarea"
+    id: "epic-child-issues"
+    attributes:
+      label: "Child Issues 🔗"
+      description: "A list of child issues (stories and tasks) that will contribute to the completion of the Epic. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        - [ ] 1. #issue_number
+        - [ ] 2. #issue_number
+        - [ ] 3. #issue_number</pre>
+          </details>
+        </blockquote>
