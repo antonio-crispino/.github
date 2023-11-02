@@ -1,0 +1,186 @@
+name: "Story"
+description: "A Story (also known as user story) is a work item that adds value to the user. Stories can be part of a larger Epic and can be divided into Subtasks for easier management and tracking."
+title: "[STORY: E###-S### or S###] Story Brief Description"
+labels:
+  - "story"
+  - "type: feature"
+
+body:
+  ### LABELS ###
+
+  - type: "markdown"
+    attributes:
+      # For this section, HTML elements are used instead of Markdown. This is because the "details" HTML element, which provides a collapsible feature, doesn't support Markdown properly within it. Additionally, there is no equivalent feature to this "details" element in GitHub Flavored Markdown. To ensure consistency and convenience, the entire section is written in HTML. This approach avoids mixing a small amount of Markdown with a predominantly HTML structure, which is mainly within the "details" elements. Since CSS cannot be used here, some GitHub styled HTML elements were used for styling purposes alone. The HTML was written and tested within HTML and Markdown files, then pasted here.
+      value: |
+        <p><strong>Labels 🏷️</strong></p>
+        <blockquote>
+          <p>In addition to the <code>story</code> and <code>type: feature</code> labels, apply a label to this issue for each of the following properties:</p>
+
+          <details>
+            <summary><strong>Priority</strong></summary>
+            <br />
+            <p>The priority of the Story (MoSCoW method).</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col" width="115">Option</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr title="priority: must-have">
+                  <th scope="row">☀️</th>
+                  <td><code>must-have</code></td>
+                  <td>Essential and critical for success; non-negotiable.</td>
+                </tr>
+                <tr title="priority: should-have">
+                  <th scope="row">🔶</th>
+                  <td><code>should-have</code></td>
+                  <td>Important but not vital; can be delayed.</td>
+                </tr>
+                <tr title="priority: could-have">
+                  <th scope="row">🔷</th>
+                  <td><code>could-have</code></td>
+                  <td>Desirable but optional; included if resources allow.</td>
+                </tr>
+                <tr title="priority: won't-have">
+                  <th scope="row">⛔</th>
+                  <td><code>won't-have</code></td>
+                  <td>Lowest priority; not necessary now, may be reconsidered later.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>The format for the Priority label is <code>priority: option</code>, where "option" is one of the possible options above. Hover over a row to see its label.</p>
+          </details>
+
+          <details>
+            <summary><strong>Points</strong></summary>
+            <br />
+            <p>The estimated effort required to complete the Story. This is estimated using user story points (USP). The number of user story points allocated is an option selected from the following Fibonacci-like sequence:</p>
+            <p>
+              <code title="points: 1">1</code>, <code title="points: 2">2</code>,
+              <code title="points: 3">3</code>, <code title="points: 5">5</code>,
+              <code title="points: 8">8</code>, <code title="points: 13">13</code>,
+              <code title="points: 20">20</code>, <code title="points: 40">40</code>,
+              <code title="points: 100">100</code>
+            </p>
+            <p>The format for the Points label is <code>points: option</code>, where "option" is one of the possible options above. Hover over an option to see its label.</p>
+          </details>
+
+        </blockquote>
+        <br />
+
+  ### USER STORY ###
+
+  - type: "textarea"
+    id: "story-user-story"
+    attributes:
+      label: "User Story 💡"
+      description: "An brief description of the feature from the user's perspective, highlighting its value to the user."
+      placeholder: "As a [User Type], I want [Goal], so that [Reason]."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>As a [User Type], I want [Goal], so that [Reason].</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### DESCRIPTION ###
+
+  - type: "textarea"
+    id: "story-description"
+    attributes:
+      label: "Description 📝"
+      description: "A detailed description of the Story. This includes any relevant context, requirements, and constraints."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### DEPENDENCIES ###
+
+  - type: "textarea"
+    id: "story-dependencies"
+    attributes:
+      label: "Dependencies ⛓️"
+      description: "A list of dependencies required for the completion of the Story. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. This Story cannot start until [#issue_number] has [finished/started].
+        2. This Story cannot finish until [#issue_number] has [finished/started].
+        3. Dependency 3
+        &#13;
+        In addition to these dependencies between issues, there may also be other types of dependencies
+        to consider, such as external, resource-related, and business-related dependencies.</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### ACCEPTANCE CRITERIA ###
+
+  - type: "textarea"
+    id: "story-acceptance-criteria"
+    attributes:
+      label: "Acceptance Criteria ✔️"
+      description: "A list of conditions that must be met for the Story to be considered complete. This can use the Given-When-Then (GWT) format and other statement formats if appropriate."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. Given [Context], when [Action], then [Expected Result].
+        2. Given [Context], when [Action], then [Expected Result].
+        3. Acceptance criteria 3</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### SUBTASKS ###
+
+  - type: "textarea"
+    id: "story-subtasks"
+    attributes:
+      label: "Subtasks 📋"
+      description: "A list of subtasks required to complete the Story. These do not need to have their own Subtask issues, but they could. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        - [ ] 1. Subtask 1
+        - [ ] 2. Subtask 2
+        - [ ] 3. #issue_number</pre>
+          </details>
+        </blockquote>
