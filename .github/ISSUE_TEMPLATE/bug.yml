@@ -1,0 +1,235 @@
+name: "Bug"
+description: "A Bug is a work item that represents a problem, error, flaw, or fault in the software that needs to be fixed. Bugs are stand-alone and can be further broken down into child Subtasks."
+title: "[BUG: B###] Bug Brief Description"
+labels:
+  - "bug"
+  - "type: fix"
+
+body:
+  ### LABELS ###
+
+  - type: "markdown"
+    attributes:
+      # For this section, HTML elements are used instead of Markdown. This is because the "details" HTML element, which provides a collapsible feature, doesn't support Markdown properly within it. Additionally, there is no equivalent feature to this "details" element in GitHub Flavored Markdown. To ensure consistency and convenience, the entire section is written in HTML. This approach avoids mixing a small amount of Markdown with a predominantly HTML structure, which is mainly within the "details" elements. Since CSS cannot be used here, some GitHub styled HTML elements were used for styling purposes alone. The HTML was written and tested within HTML and Markdown files, then pasted here.
+      value: |
+        <p><strong>Labels 🏷️</strong></p>
+        <blockquote>
+          <p>In addition to the <code>bug</code> label, apply a label to this issue for each of the following properties:</p>
+
+          <details>
+            <summary><strong>Priority</strong></summary>
+            <br />
+            <p>The priority of the Bug.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Option</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr title="priority: blocker">
+                  <th scope="row">💥</th>
+                  <td><code>blocker</code></td>
+                  <td>Halts work or progress completely; requires immediate resolution.</td>
+                </tr>
+                <tr title="priority: critical">
+                  <th scope="row">🚨</th>
+                  <td><code>critical</code></td>
+                  <td>Severely impacts functionality; demands prompt attention.</td>
+                </tr>
+                <tr title="priority: major">
+                  <th scope="row">🔻</th>
+                  <td><code>major</code></td>
+                  <td>Affects functionality or performance; important but not immediate.</td>
+                </tr>
+                <tr title="priority: minor">
+                  <th scope="row">🔶</th>
+                  <td><code>minor</code></td>
+                  <td>Limited impact; can be addressed after higher priorities.</td>
+                </tr>
+                <tr title="priority: trivial">
+                  <th scope="row">🔷</th>
+                  <td><code>trivial</code></td>
+                  <td>Very small issues with negligible impact; addressed whenever convenient.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>The format for the Priority label is <code>priority: option</code>, where "option" is one of the possible options above. Hover over a row to see its label.</p>
+          </details>
+
+          <details>
+            <summary><strong>Points</strong></summary>
+            <br />
+            <p>The estimated effort required to complete the Bug. This is estimated using bug points (BP), which are based on and equivalent to user story points (USP). The number of task points allocated is an option selected from the following Fibonacci-like sequence:</p>
+            <p>
+              <code title="points: 1">1</code>, <code title="points: 2">2</code>,
+              <code title="points: 3">3</code>, <code title="points: 5">5</code>,
+              <code title="points: 8">8</code>, <code title="points: 13">13</code>,
+              <code title="points: 20">20</code>, <code title="points: 40">40</code>,
+              <code title="points: 100">100</code>
+            </p>
+            <p>The format for the Points label is <code>points: option</code>, where "option" is one of the possible options above. Hover over an option to see its label.</p>
+          </details>
+
+        </blockquote>
+        <br />
+
+  ### DESCRIPTION ###
+
+  - type: "textarea"
+    id: "bug-description"
+    attributes:
+      label: "Description 📝"
+      description: "A statement on which part of the software has been impacted by the Bug and who it is impacting."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### STEPS TO REPRODUCE ###
+
+  - type: "textarea"
+    id: "bug-steps-to-reproduce"
+    attributes:
+      label: "Steps to Reproduce 👣"
+      description: "A list of steps to reproduce the Bug."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        1. Step 1
+        2. Step 2
+        3. Step 3</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### ACTUAL BEHAVIOR ###
+
+  - type: "textarea"
+    id: "bug-actual-behavior"
+    attributes:
+      label: "Actual Behavior ❌"
+      description: "A description of the Bug in detail, including what is happening and where. If applicable, provide attachments to help clarify."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### EXPECTED BEHAVIOR ###
+
+  - type: "textarea"
+    id: "bug-expected-behavior"
+    attributes:
+      label: "Expected Behavior ✔️"
+      description: "A description of what should be happening instead (without the Bug). If applicable, provide attachments to help clarify."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### USER(S) IMPACTED ###
+
+  - type: "textarea"
+    id: "bug-users-impacted"
+    attributes:
+      label: "User(s) Impacted 👥"
+      description: "The details on which users are impacted by this Bug, and the potential business impact."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### PART OF THE SOFTWARE IMPACTED ###
+
+  - type: "textarea"
+    id: "bug-part-of-the-software-impacted"
+    attributes:
+      label: "Part of the Software Impacted 💻"
+      description: "The specific part of the software affected by the Bug."
+    validations:
+      required: true
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### ATTACHMENTS ###
+
+  - type: "textarea"
+    id: "bug-attachments"
+    attributes:
+      label: "Attachments 📎"
+      description: "Any relevant screenshots, recordings, or log files to help identify the Bug."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: "<br />"
+
+  ### SUBTASKS ###
+
+  - type: "textarea"
+    id: "bug-subtasks"
+    attributes:
+      label: "Subtasks 📋"
+      description: "A list of subtasks required to fix the Bug. These do not need to have their own Subtask issues, but they could. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        - [ ] 1. Subtask 1
+        - [ ] 2. Subtask 2
+        - [ ] 3. #issue_number</pre>
+          </details>
+        </blockquote>
+        <br />
+
+  ### RELATED ISSUE(S) ###
+
+  - type: "textarea"
+    id: "bug-related-issues"
+    attributes:
+      label: "Related Issue(s) 🔗"
+      description: "The related issues for this Bug, if it has any. To reference an issue, use the #issue_number format."
+    validations:
+      required: false
+
+  - type: "markdown"
+    attributes:
+      value: |
+        <blockquote>
+          <details>
+            <summary><em>Sample Format</em></summary>
+            <br />
+            <pre>
+        - [ ] 1. #issue_number
+        - [ ] 2. #issue_number
+        - [ ] 3. #issue_number</pre>
+          </details>
+        </blockquote>
