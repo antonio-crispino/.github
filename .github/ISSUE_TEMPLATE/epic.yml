@@ -2,7 +2,7 @@ name: "Epic"
 description: "An Epic is a large body of work that is broken down into a number of smaller parts (Stories and Tasks)."
 title: "[EPIC: E###] Epic Brief Description"
 labels:
-  - "epic"
+  - "issue: epic"
 
 body:
   ### LABELS ###
@@ -13,7 +13,7 @@ body:
       value: |
         <p><strong>Labels 🏷️</strong></p>
         <blockquote>
-          <p>In addition to the <code>epic</code> label, apply a label to this issue for the following property:</p>
+          <p>In addition to the <code>issue: epic</code> label, apply a label to this issue for the following property:</p>
 
           <details>
             <summary><strong>Priority</strong></summary>
@@ -46,7 +46,7 @@ body:
                 <tr title="priority: won't-have">
                   <th scope="row">⛔</th>
                   <td><code>won't-have</code></td>
-                  <td>Lowest priority; not necessary now, may be reconsidered later.</td>
+                  <td>Lowest priority; not necessary now; may be reconsidered later.</td>
                 </tr>
               </tbody>
             </table>
