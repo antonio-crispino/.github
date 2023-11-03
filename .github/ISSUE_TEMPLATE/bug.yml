@@ -1,5 +1,5 @@
 name: "Bug"
-description: "A Bug is a work item that represents a problem, error, flaw, or fault in the software that needs to be fixed. Bugs are stand-alone and can be further broken down into child Subtasks."
+description: "A Bug is a work item that represents a problem, error, flaw, or fault in the software that needs to be fixed. Bugs are stand-alone."
 title: "[BUG: B###] Bug Brief Description"
 labels:
   - "bug"
@@ -14,7 +14,7 @@ body:
       value: |
         <p><strong>Labels 🏷️</strong></p>
         <blockquote>
-          <p>In addition to the <code>bug</code> label, apply a label to this issue for each of the following properties:</p>
+          <p>In addition to the <code>bug</code> and <code>type: fix</code> labels, apply a label to this issue for each of the following properties:</p>
 
           <details>
             <summary><strong>Priority</strong></summary>
@@ -191,7 +191,7 @@ body:
     id: "bug-subtasks"
     attributes:
       label: "Subtasks 📋"
-      description: "A list of subtasks required to fix the Bug. These do not need to have their own Subtask issues, but they could. To reference an issue, use the #issue_number format."
+      description: "A breakdown of steps (subtasks) required to fix the Bug."
     validations:
       required: false
 
@@ -205,7 +205,7 @@ body:
             <pre>
         - [ ] 1. Subtask 1
         - [ ] 2. Subtask 2
-        - [ ] 3. #issue_number</pre>
+        - [ ] 3. Subtask 3</pre>
           </details>
         </blockquote>
         <br />

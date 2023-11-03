@@ -1,5 +1,5 @@
 name: "Task"
-description: "A Task is a work item that does not fit the narrative style of a Story (user story). Tasks can be part of a larger Epic and can be divided into Subtasks for easier management and tracking."
+description: "A Task is a work item that does not fit the narrative style of a Story (user story). It should be possible to complete a Task within a single sprint. Tasks can be part of a larger Epic or stand-alone."
 title: "[TASK: E###-T### or T###] Task Brief Description"
 labels:
   - "task"
@@ -206,7 +206,7 @@ body:
     id: "task-subtasks"
     attributes:
       label: "Subtasks 📋"
-      description: "A list of subtasks required to complete the Task. These do not need to have their own Subtask issues, but they could. To reference an issue, use the #issue_number format."
+      description: "A breakdown of steps (subtasks) required to complete the Task."
     validations:
       required: false
 
@@ -220,6 +220,6 @@ body:
             <pre>
         - [ ] 1. Subtask 1
         - [ ] 2. Subtask 2
-        - [ ] 3. #issue_number</pre>
+        - [ ] 3. Subtask 3</pre>
           </details>
         </blockquote>

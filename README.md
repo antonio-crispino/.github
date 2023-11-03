@@ -10,13 +10,12 @@ These default community health files are designed to be reused across my reposit
 
 The following are the default community health files included in this repository.
 
-1. [**Issue Templates/Forms**](https://github.com/antonio-crispino/.github/issues/new/choose): Issue templates/forms help customize and standardize the information that contributors include when they report issues in a repository. For more details, refer to this GitHub [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates). Five issue forms are provided to support agile software development, yet their [configuration](.github/ISSUE_TEMPLATE/config.yml "config.yml") does not restrict collaborators from opening blank issues. Information about these issue forms can be found in the [contributing](.github/CONTRIBUTING.md#1---issues "CONTRIBUTING.md") file. The following is the list of issue forms:
+1. [**Issue Templates/Forms**](https://github.com/antonio-crispino/.github/issues/new/choose): Issue templates/forms help customize and standardize the information that contributors include when they report issues in a repository. For more details, refer to this GitHub [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates). Four issue forms are provided to support agile software development, yet their [configuration](.github/ISSUE_TEMPLATE/config.yml "config.yml") does not restrict collaborators from opening blank issues. Information about these issue forms can be found in the [contributing](.github/CONTRIBUTING.md#1---issues "CONTRIBUTING.md") file. The following is the list of issue forms:
 
    1. [**Epic**](https://github.com/antonio-crispino/.github/issues/new/choose)
    2. [**Story**](https://github.com/antonio-crispino/.github/issues/new/choose)
    3. [**Task**](https://github.com/antonio-crispino/.github/issues/new/choose)
    4. [**Bug**](https://github.com/antonio-crispino/.github/issues/new/choose)
-   5. [**Subtask**](https://github.com/antonio-crispino/.github/issues/new/choose)
 
 2. [**Pull Request Template**](.github/pull_request_template.md "pull_request_template.md"): A pull request template ensures that contributors provide consistent and desired information when they submit pull requests to a repository. For more details, refer to this GitHub [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates).
 
