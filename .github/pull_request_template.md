@@ -18,7 +18,7 @@ The type of Pull Request. Select one or more of the following types and apply th
 - 🗑️ `revert` : Changes that revert a previous commit.
 - 💎 `style` : Changes to code that do not affect its meaning (formatting, etc.).
 - 🚨 `test` : Changes to existing tests or adding missing tests.
-- ♻️ `chore` : Changes, additions, configurations, routines, or maintenance tasks that don't fit into any other category. Changes do not modify src or test files.
+- ♻️ `chore` : Changes, additions, configurations, routines, or maintenance tasks that do not fit into any other category (changes do not modify src or test files).
 
 ### Related Issue(s) 🔗
 

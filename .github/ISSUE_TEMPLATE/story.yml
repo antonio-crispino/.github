@@ -2,7 +2,7 @@ name: "Story"
 description: "A Story (also known as user story) is a work item that adds value to the user. It should be possible to complete a Story within a single sprint. Stories can be part of a larger Epic or stand-alone."
 title: "[STORY: E###-S### or S###] Story Brief Description"
 labels:
-  - "story"
+  - "issue: story"
   - "type: feature"
 
 body:
@@ -14,7 +14,7 @@ body:
       value: |
         <p><strong>Labels 🏷️</strong></p>
         <blockquote>
-          <p>In addition to the <code>story</code> and <code>type: feature</code> labels, apply a label to this issue for each of the following properties:</p>
+          <p>In addition to the <code>issue: story</code> and <code>type: feature</code> labels, apply a label to this issue for each of the following properties:</p>
 
           <details>
             <summary><strong>Priority</strong></summary>
@@ -47,7 +47,7 @@ body:
                 <tr title="priority: won't-have">
                   <th scope="row">⛔</th>
                   <td><code>won't-have</code></td>
-                  <td>Lowest priority; not necessary now, may be reconsidered later.</td>
+                  <td>Lowest priority; not necessary now; may be reconsidered later.</td>
                 </tr>
               </tbody>
             </table>
@@ -57,13 +57,11 @@ body:
           <details>
             <summary><strong>Points</strong></summary>
             <br />
-            <p>The estimated effort required to complete the Story. This is estimated using user story points (USP). The number of user story points allocated is an option selected from the following Fibonacci-like sequence:</p>
+            <p>The estimated effort required to complete the Story. This is estimated using user story points (USP). The number of user story points allocated is an option selected from the following Fibonacci sequence:</p>
             <p>
               <code title="points: 1">1</code>, <code title="points: 2">2</code>,
               <code title="points: 3">3</code>, <code title="points: 5">5</code>,
-              <code title="points: 8">8</code>, <code title="points: 13">13</code>,
-              <code title="points: 20">20</code>, <code title="points: 40">40</code>,
-              <code title="points: 100">100</code>
+              <code title="points: 8">8</code>, <code title="points: 13">13</code>
             </p>
             <p>The format for the Points label is <code>points: option</code>, where "option" is one of the possible options above. Hover over an option to see its label.</p>
           </details>
